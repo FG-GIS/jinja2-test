@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Tap - Bar Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1a1a1a; /* Dark background */
+            color: #f0f0f0; /* Light text color */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Full viewport height */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+        }
+
+        .menu-container {
+            background-color: #282828; /* Slightly lighter dark background for the menu box */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+            padding: 40px;
+            width: 100%;
+            max-width: 700px; /* Max width for readability */
+            text-align: center;
+            border: 1px solid #444; /* Subtle border */
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif; /* Elegant serif font for title */
+            color: #e0b06b; /* Golden/bronze color for main title */
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds depth to the title */
+        }
+
+        .menu-category {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif; /* Elegant serif font for categories */
+            color: #c0905b; /* Slightly darker golden color for category titles */
+            font-size: 2em;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0b06b; /* Underline for categories */
+            display: inline-block; /* Makes the border only as wide as the text */
+            padding-bottom: 5px;
+        }
+
+        ul {
+            list-style: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            display: flex; /* Flexbox for name and price alignment */
+            justify-content: space-between; /* Pushes name to left, price to right */
+            align-items: baseline; /* Aligns text based on their baselines */
+            padding: 10px 0;
+            border-bottom: 1px dashed #555; /* Dashed separator between items */
+        }
+
+        li:last-child {
+            border-bottom: none; /* No border for the last item in a category */
+        }
+
+        .drink-name {
+            font-size: 1.3em;
+            color: #f8f8f8; /* Slightly off-white for drink names */
+            flex-grow: 1; /* Allows name to take available space */
+            text-align: left;
+        }
+
+        .drink-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4em;
+            color: #e0b06b; /* Golden color for prices */
+            margin-left: 20px; /* Space between name and price */
+            white-space: nowrap; /* Prevents price from wrapping to next line */
+        }
+
+        .menu-footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #aaa; /* Lighter grey for footer text */
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>The Golden Tap</h1>
+
+        <div class="menu-category">
+            <h2>Cocktails</h2>
+            <ul>
+                <li>
+                    <span class="drink-name">Classic Negroni</span>
+                    <span class="drink-price">€12.00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Espresso Martini</span>
+                    <span class="drink-price">€11.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">Daiquiri (Classic)</span>
+                    <span class="drink-price">€10.00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Whiskey Sour</span>
+                    <span class="drink-price">€10.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">Gin & Tonic (Premium)</span>
+                    <span class="drink-price">€9.00</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-category">
+            <h2>Beers</h2>
+            <ul>
+                <li>
+                    <span class="drink-name">Peroni Nastro Azzurro</span>
+                    <span class="drink-price">€5.00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Menabrea Original</span>
+                    <span class="drink-price">€6.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">Birra Moretti (Draft)</span>
+                    <span class="drink-price">€4.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">IPA del Borgo</span>
+                    <span class="drink-price">€7.50</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-category">
+            <h2>Non-Alcoholic</h2>
+            <ul>
+                <li>
+                    <span class="drink-name">San Pellegrino Sparkling Water</span>
+                    <span class="drink-price">€3.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">Fresh Lemonade</span>
+                    <span class="drink-price">€4.50</span>
+                </li>
+                <li>
+                    <span class="drink-name">Mandarino Juice</span>
+                    <span class="drink-price">€4.00</span>
+                </li>
+                <li>
+                    <span class="drink-name">Crodino (Aperitivo)</span>
+                    <span class="drink-price">€5.00</span>
+                </li>
+            </ul>
+        </div>
+
+        <p class="menu-footer">Prices include VAT. Please ask your server about allergens.</p>
+    </div>
+</body>
+</html>
