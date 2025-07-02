@@ -18,7 +18,7 @@
                 {% for drink in cocktails %}
                 <li>
                     <span class="drink-name">{{ drink.name }}</span>
-                    <span class="drink-price">{{ drink.price }} €</span>
+                    <span class="drink-price">{{ drink.price|euro }} €</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -31,7 +31,7 @@
                 {% for drink in birre %}
                 <li>
                     <span class="drink-name">{{ drink.name }}</span>
-                    <span class="drink-price">{{ drink.price }} €</span>
+                    <span class="drink-price">{{ drink.price|euro }} €</span>
                 </li>
                 {% endfor %}
             </ul>
@@ -45,7 +45,7 @@
                 {% for drink in analcolici %}
                 <li>
                     <span class="drink-name">{{ drink.name }}</span>
-                    <span class="drink-price">{{ drink.price }} €</span>
+                    <span class="drink-price">{{ drink.price|euro }} €</span>
                 </li>
                 {% endfor %}
             </ul>

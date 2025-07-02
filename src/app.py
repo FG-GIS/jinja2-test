@@ -2,9 +2,14 @@ from jinja2 import Environment, FileSystemLoader
 import os
 import shutil
 
+# Filtro personalizzato per formattare i prezzi con la virgola
+def euro(value):
+    return f"{value:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
 # Set up Jinja2 environment to look for templates in the current directory
 # template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 env = Environment(loader=FileSystemLoader("templates")) # Assuming menu.html is in the same folder
+env.filters['euro'] = euro
 
 # Load your template
 template = env.get_template('menu_template.jinja')
