@@ -1,0 +1,85 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+.menu-container {
+    background-color: #282828; /* Slightly lighter dark background for the menu box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    padding: 40px;
+    width: 100%;
+    max-width: 700px; /* Max width for readability */
+    text-align: center;
+    border: 1px solid #444; /* Subtle border */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for title */
+    color: #e0b06b; /* Golden/bronze color for main title */
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds depth to the title */
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for categories */
+    color: #c0905b; /* Slightly darker golden color for category titles */
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0b06b; /* Underline for categories */
+    display: inline-block; /* Makes the border only as wide as the text */
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex; /* Flexbox for name and price alignment */
+    justify-content: space-between; /* Pushes name to left, price to right */
+    align-items: baseline; /* Aligns text based on their baselines */
+    padding: 10px 0;
+    border-bottom: 1px dashed #555; /* Dashed separator between items */
+}
+
+li:last-child {
+    border-bottom: none; /* No border for the last item in a category */
+}
+
+.drink-name {
+    font-size: 1.3em;
+    color: #f8f8f8; /* Slightly off-white for drink names */
+    flex-grow: 1; /* Allows name to take available space */
+    text-align: left;
+}
+
+.drink-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    color: #e0b06b; /* Golden color for prices */
+    margin-left: 20px; /* Space between name and price */
+    white-space: nowrap; /* Prevents price from wrapping to next line */
+}
+
+.menu-footer {
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #aaa; /* Lighter grey for footer text */
+    font-style: italic;
+}

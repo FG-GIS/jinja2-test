@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page_title }}</title>
+    <title>{{ bar_name }} - Menu</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
 </head>
@@ -17,23 +17,26 @@
             <ul>
                 {% for drink in cocktails %}
                 <li>
-                    <span class="drink-name">{{ drink[name] }}</span>
-                    <span class="drink-price">{{ drink[price] }}</span>
+                    <span class="drink-name">{{ drink.name }}</span>
+                    <span class="drink-price">{{ drink.price }} €</span>
                 </li>
+                {% endfor %}
             </ul>
         </div>
-
+        {% endif %}
         {% if birre %}
         <div class="menu-category">
             <h2>Birre</h2>
             <ul>
                 {% for drink in birre %}
                 <li>
-                    <span class="drink-name">{{ drink[name] }}</span>
-                    <span class="drink-price">{{ drink[price] }}</span>
+                    <span class="drink-name">{{ drink.name }}</span>
+                    <span class="drink-price">{{ drink.price }} €</span>
                 </li>
+                {% endfor %}
             </ul>
         </div>
+        {% endif %}
 
         {% if analcolici %}
         <div class="menu-category">
@@ -41,11 +44,13 @@
             <ul>
                 {% for drink in analcolici %}
                 <li>
-                    <span class="drink-name">{{ drink[name] }}</span>
-                    <span class="drink-price">{{ drink[price] }}</span>
+                    <span class="drink-name">{{ drink.name }}</span>
+                    <span class="drink-price">{{ drink.price }} €</span>
                 </li>
+                {% endfor %}
             </ul>
         </div>
+        {% endif %}
     </div>
 </body>
 </html>
