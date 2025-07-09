@@ -15,18 +15,29 @@ env.filters['euro'] = euro
 template = env.get_template('menu_template.jinja')
 
 # Your test data (as discussed)
-cocktails = [
-    {'name': 'Classic Negroni', 'price': 12.00},
-    {'name': 'Espresso Martini', 'price': 11.50},
-    {'name': 'Daiquiri (Classic)', 'price': 10.00},
-]
-beers = [
-    {'name': 'Peroni Nastro Azzurro', 'price': 5.00},
-    {'name': 'Menabrea Original', 'price': 6.50},
-]
-non_alcoholic_drinks = [
-    {'name': 'San Pellegrino Sparkling Water', 'price': 3.50},
-    {'name': 'Fresh Lemonade', 'price': 4.50},
+categories = [
+    {
+        "title": "Cocktails",
+        "drinks": [
+            {'name': 'Classic Negroni', 'price': 12.00},
+            {'name': 'Espresso Martini', 'price': 11.50},
+            {'name': 'Daiquiri (Classic)', 'price': 10.00},
+        ]
+    },
+    {
+        "title": "Birre",
+        "drinks": [
+            {'name': 'Peroni Nastro Azzurro', 'price': 5.00},
+            {'name': 'Menabrea Original', 'price': 6.50},
+        ]
+    },
+    {
+        "title": "Analcolici",
+        "drinks": [
+            {'name': 'San Pellegrino Sparkling Water', 'price': 3.50},
+            {'name': 'Fresh Lemonade', 'price': 4.50},
+        ]
+    }
 ]
 
 nome = "Cinci Bar"
@@ -34,9 +45,7 @@ nome = "Cinci Bar"
 # Render the template with the data
 rendered_html = template.render(
     bar_name = nome,
-    cocktails=cocktails,
-    birre=beers,
-    analcolici=non_alcoholic_drinks
+    categories = categories
 )
 
 # Save the rendered HTML to a file in the 'public' subdirectory
