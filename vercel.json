@@ -1,0 +1,4 @@
+{
+  "buildCommand": "uv run src/app.py",
+  "installCommand": "python3 -m pip install uv && python3 -m uv pip install ."
+}
